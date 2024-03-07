@@ -1,38 +1,70 @@
 import React from 'react';
-import HMI from '../../Assets/HMI.png';
+import hmi2 from '../../Assets/hmi2.png';
 import PLC from '../../Assets/PLC.jpg';
 import servo from '../../Assets/servo.png';
 import Vbox from '../../Assets/Vbox.png';
-import { Link } from 'react-router-dom';
+import img1 from '../../Assets/img1.jpg';
+import { Link, useNavigate } from 'react-router-dom';
 import ProSeries from '../ProSeries';
 
-const Product = () => {
-  const imgs = [HMI, PLC, servo, Vbox];
 
+const Product = () => {
+  // const imgs = [
+  //   ,{img:PLC,title:'HMI',description:'HMI has been widely recognized by the market for economical and practical fast...'},
+  //   {img:servo,title:'PLC',description:'Servo Drives has the feature of high response,easy debugging,strong protection'},
+  //   {img:Vbox,title:'Servo',description:'lorem iosum rgebch heg'},
+  //   {img:Vbox,title:'Vbox',description:'lorem iosum rgebch heg'},
+  //   ];
+  const divStyle = {
+    backgroundImage: `url(${img1})`,
+  };
+  const navigate=useNavigate()
+const clickFunc=()=>{
+navigate('/proseries')
+
+
+}
+const clickFunc1=()=>{
+  navigate('/proseries1')
+  
+  
+  }
+  const clickFunc2=()=>{
+    navigate('/proseries2')
+    
+    
+    }
+    const clickFunc3=()=>{
+      navigate('/proseries3')
+      
+      
+      }
   return (
     <>
+    <div><img className="   " src={img1} alt=""/></div>
+
       <div className="mx-auto max-w-screen-lg">
         <div
-          className="relative h-56 rounded-b-lg bg-cover bg-center bg-no-repeat shadow-lg"
-          style={{ backgroundImage: 'url()' }}
+          // className="relative h-56 rounded-b-lg bg-cover bg-center bg-no-repeat shadow-lg"
+          // style={divStyle}
         >
-          <div className="px-4 pt-8 pb-10">
+          
+          {/* <div className=" pt-8 pb-10  w-full">
             <div className="absolute inset-x-0 -bottom-10 mx-auto w-36 rounded-full border-8 border-white shadow-lg">
               <span className="absolute right-0 m-3 h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-300 ring-offset-2"></span>
-              <img className="mx-auto h-auto w-full rounded-full" src="/images/n2yIu0Buhpft9wZ6tROzn.png" alt="" />
+              <img className="rounded-full    " src={hmi2} alt=""/>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="mt-10 flex flex-col items-start justify-center space-y-4 py-8 px-4 sm:flex-row sm:space-y-0 md:justify-between lg:px-0">
           <div className="max-w-lg">
-            <h1 className="text-2xl font-bold text-gray-800">Beep Essences</h1>
+            <h1 className="text-2xl font-bold text-[#fdab52]">PRODUCTS</h1>
             <p className="mt-2 text-gray-600">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, alias. Quas necessitatibus
-              exercitationem praesentium.
+            We “Al Shams Traders ” are the leading, Importer, Exporter, And Service Provider of an extensive array of Machine in the Industrial and sale HMI & PLC & IIoT V-BOX & SERVO & INVERTER.
             </p>
           </div>
           <div className="">
-            <button className="flex whitespace-nowrap rounded-lg bg-pink-600 px-6 py-2 font-bold text-white transition hover:translate-y-1">
+            <button className="flex whitespace-nowrap rounded-lg bg-[#fdab52] px-6 py-2 font-bold text-white transition hover:translate-y-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="mr-2 inline h-6 w-6"
@@ -49,67 +81,76 @@ const Product = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="mr-2 inline h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-              +1 432 923 0001
+              +92 41 8542681
             </p>
           </div>
         </div>
-        {imgs && imgs.length > 0 ? (
-          <main className="grid grid-cols-2 gap-x-6 gap-y-10 px-2 pb-20 sm:grid-cols-3 sm:px-8 lg:mt-16 lg:grid-cols-4 lg:gap-x-4 lg:px-0">
-            {imgs.map((img, index) => (
-              <article key={index} className="relative">
-                <div className="aspect-square overflow-hidden ">
-               <Link to="/proSeries">
-                  <img
-                    className="h-100 w-100 object-cover  transition-all duration-300 group-hover:scale-125"
-                    src={img}
-                    alt=""
-                  />
-                  </Link>
-                </div>
-                <div className="absolute top-0 m-1 rounded-full bg-white">
-                  <p className="rounded-full bg-black p-1 text-[10px] font-bold uppercase tracking-wide text-white sm:py-1 sm:px-3">
-                    Sale
-                  </p>
-                </div>
-                <div className="mt-4 flex items-start justify-between">
-                  <div>
-                    <h3 className="text-xs font-semibold sm:text-sm md:text-base">
-                      <a href="#" title="">
-                        Arabian Musk
-                        <span className="absolute" aria-hidden="true"></span>
-                      </a>
-                    </h3>
-                    <div className="mt-2 flex items-center">
-                      {[...Array(4)].map((_, i) => (
-                        <svg
-                          key={i}
-                          className="block h-3 w-3 align-middle text-pink-600 sm:h-4 sm:w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            className=""
-                          ></path>
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="text-right">
-                    <del className="mt-px text-xs font-semibold text-gray-600 sm:text-sm"> $79.00 </del>
-                    <p className="text-xs font-normal sm:text-sm md:text-base">$99.00</p>
-                  </div>
-                </div>
-              </article>
-            ))}
+        
+          <main className="grid grid-cols-2   flex-row gap-x-6 gap-y-10 px-2 pb-20 sm:grid-cols-3 sm:px-8 lg:mt-4  lg:grid-cols-4 lg:gap-x-4 lg:px-0">
+            
           </main>
-        ) : (
-          <h1>FAILED TO Fetch products</h1>
-        )}
+          <div class="bg-white dark:bg-gray-800 h-full  py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    
+
+        <div class="grid grid-cols-2  gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+        
+            <a onClick={clickFunc1} href="#"
+                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                <img src={servo} loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Servo</span>
+            </a>
+        
+
+       
+            <a onClick={clickFunc}  href="#"
+                class="group relative flex  h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                <img src={hmi2} loading="lazy" alt="Photo by Magicle" class="absolute inset-0 ml-24 h-72 w-96 object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                     
+                </div>
+                <span class=" relative ml-4 mb-3  text-sm text-white md:ml-5 md:text-lg">HMI</span><br/>
+                
+
+            </a>
+           
+
+            
+            <a   onClick={clickFunc2} href="#"
+                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                <img src={PLC} loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">PLC</span>
+            </a>
+          
+
+            <a  onClick={clickFunc3} href="#"
+                class="group relative flex  items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                <img src={Vbox} loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0  h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">IIOT-Vbox</span>
+            </a>
+           
+        </div>
+    </div>
+</div>
+     
       </div>
-      <ProSeries HMI={HMI} />
 
     </>
   );

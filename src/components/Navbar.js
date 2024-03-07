@@ -25,8 +25,8 @@ const Navbar = () => {
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="#" class="flex items-center">
-      <img src="https://alshamstrader.pk/wp-content/uploads/2022/10/Al-Shamas-Traders-Logo-White-e1677957102725.png" class="  mr-3 h-[30px]
-    w-[170px]  sm:w-[30%]  sm:h-[30%] "  alt="Flowbite Logo" />
+      <img src="https://alshamstrader.pk/wp-content/uploads/2022/10/Al-Shamas-Traders-Logo-White-e1677957102725.png" class=" h-[50px]
+     "  alt="Flowbite Logo" />
       {/* <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Diouma</span> */}
   </a>
   <div class="flex md:order-2">

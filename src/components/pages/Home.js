@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import img1 from '../../Assets/img1.jpg' 
 import img2 from '../../Assets/img2.jpg' 
 import img3 from '../../Assets/img3.png' 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronRight, faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons';
 const imageUrls = [
   img1,
   img2,
@@ -71,7 +73,7 @@ const Home = () => {
         data-carousel-prev
         onClick={handlePrevSlide}
       >
-        pre
+  <FontAwesomeIcon icon={faCircleChevronLeft} />
       </button>
       <button
         type="button"
@@ -79,7 +81,7 @@ const Home = () => {
         data-carousel-next
         onClick={handleNextSlide}
       >
-      next 
+  <FontAwesomeIcon icon={faCircleChevronRight}  />
       </button>
     </div>
   );

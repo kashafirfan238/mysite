@@ -5,6 +5,10 @@ import Product from "./components/pages/Product";
 import Contact from "./components/pages/Contact";
 import ProSeries from "./components/ProSeries";
 import Footer from "./components/Footer";
+import Proseries1 from "./components/Proseries1";
+import Proseries2 from "./components/Proseries2";
+import Proseries3 from "./components/Proseries3";
+import ProDetail from "./components/pages/ProDetail";
 
 function App() {
   return (
@@ -18,12 +22,12 @@ function App() {
   
      <Route path="/products" element={<Product/>}/>
      <Route path="/proSeries" element={<ProSeries/>}/>
-
      <Route path="/contact" element={<Contact/>}/>
-     
-
-
-    
+     <Route path="/proseries" element={<ProSeries/>}/>
+     <Route path="/proseries1" element={<Proseries1/>}/> 
+     <Route path="/proseries2" element={<Proseries2/>}/>
+     <Route path="/proseries3" element={<Proseries3/>}/>
+     <Route path="/prodetail/:title" element={<ProDetail/>}/>
      </Routes>
      <Footer/>
     </div>
