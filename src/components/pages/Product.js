@@ -5,17 +5,12 @@ import servo from '../../Assets/servo.png';
 import Vbox from '../../Assets/Vbox.png';
 import img1 from '../../Assets/img1.jpg';
 import { Link, useNavigate } from 'react-router-dom';
-import ProSeries from '../ProSeries';
 
 
-const Product = () => {
-  // const imgs = [
-  //   ,{img:PLC,title:'HMI',description:'HMI has been widely recognized by the market for economical and practical fast...'},
-  //   {img:servo,title:'PLC',description:'Servo Drives has the feature of high response,easy debugging,strong protection'},
-  //   {img:Vbox,title:'Servo',description:'lorem iosum rgebch heg'},
-  //   {img:Vbox,title:'Vbox',description:'lorem iosum rgebch heg'},
-  //   ];
-  const divStyle = {
+const Product = () =>
+ 
+ 
+ { const divStyle = {
     backgroundImage: `url(${img1})`,
   };
   const navigate=useNavigate()

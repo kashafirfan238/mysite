@@ -1,21 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import img1 from "../../Assets/img1.jpg";
-import hmid from "../../Assets/hmid.jpg";
-import hmid1 from "../../Assets/hmid1.jpg";
+import vboxd from "../../Assets/vboxd.png";
+import vboxd1 from "../../Assets/vboxd1.jpg";
 import hmid2 from "../../Assets/hmid2.jpg";
 import hmid3 from "../../Assets/hmid3.jpg";
 
 const sectionsData = [
-  // Category HMI 1
+  // Category vbox 1
   {
-    images: hmid,
+    images: vboxd,
     title: "PI3000ig Series",
 
     btn: "PI3070ig HMI",
   },
   {
-    images: hmid,
+    images: vboxd1,
     title: "PI3000ig Series",
 
     btn: "PI3102ig HMI",
@@ -113,7 +113,7 @@ const sectionsData = [
   },
 ];
 
-const ProDetail = () => {
+const ProDetail3 = () => {
   const { title } = useParams();
   const matchedSections = sectionsData.filter((item) => item.title === title);
 
@@ -344,4 +344,4 @@ const ProDetail = () => {
   );
 };
 
-export default ProDetail;
+export default ProDetail3;

@@ -54,7 +54,7 @@ const sectionsData = [
   },
   {
     image: HMI,
-    title: "PI 3000ie Series",
+    title: "PI3000ie Series",
     titledesc: "Multi-core processor with super smooth and fast speed",
     description: [
       { line1: "Power on in 6 seconds" },
@@ -131,5 +131,6 @@ const ProSeries = () => {
     </div>
   );
 };
+
 
 export default ProSeries;

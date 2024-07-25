@@ -1,11 +1,13 @@
 import React from "react";
+import {useParams}  from "react-router-dom"
 import { useInView } from "react-intersection-observer";
 import plc1  from '../Assets/plc1.png';
 import plc2  from '../Assets/plc2.png';
 import plc3  from '../Assets/plc3.png';
 import plc4  from '../Assets/plc4.png';
 import plc5  from '../Assets/plc5.png';
-import plc6  from '../Assets/plc6.png';
+ import plc6  from '../Assets/plc6.png';
+import { Link } from "react-router-dom";
 // import HMI from '../Assets/HMI.png'
 const AnimatedSection = ({ children, isLeft }) => {
   const [ref, inView] = useInView({
@@ -32,6 +34,7 @@ const sectionsData = [
     image: plc1,
     // title: "PI3000ig Series",
     // titledesc:"ig IIoT HMI, born specifically for the Internet of Things",
+     title: "PI3000ig ",
 
     description: [
       { line1: "Supports EtherCAT and USB TYPE-C" },
@@ -159,7 +162,7 @@ const Proseries2 = () => {
                 }`}
             >
               <h3 className="font-bold mt-8 text-xl text-[#fdab52]  md:mt-0 sm:text-2xl">
-                {section.title}
+                {section.id}
               </h3>
               <h4 className="font-bold mt-8 text-md text-[#fdab52]  md:mt-0 sm:text-2xl">
               {section.titledesc}
@@ -171,7 +174,7 @@ const Proseries2 = () => {
                   <li key={index}>{Object.values(line)[0]}</li>
                 ))}
               </ul>
-<button class ="px-3 py-3 my-2 bg-gradient-to-r from-[#fdab52] to-[#fdab52] text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">{section.btn}</button>
+<Link to={`/prodetail2/${section.id}`} class ="px-3 py-3 my-2 bg-gradient-to-r from-[#fdab52] to-[#fdab52] text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">{section.btn}</Link>
 
 </>
 

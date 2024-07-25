@@ -1,122 +1,91 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import img1 from "../../Assets/img1.jpg";
-import hmid from "../../Assets/hmid.jpg";
-import hmid1 from "../../Assets/hmid1.jpg";
-import hmid2 from "../../Assets/hmid2.jpg";
-import hmid3 from "../../Assets/hmid3.jpg";
+import svd from "../../Assets/svd.jpg";
+import svdd from "../../Assets/svdd.jpg";
+import svd1 from "../../Assets/svd1.jpg";
+import svd12 from "../../Assets/svd12.jpg";
+import svd13 from "../../Assets/svd13.jpg";
+import svd21 from "../../Assets/svd21.jpg";
+import svd22 from "../../Assets/svd22.jpg";
+import svd23 from "../../Assets/svd23.jpg";
 
-const sectionsData = [
-  // Category HMI 1
+
+const sectionData = [
+  // Category HMI 1S
   {
-    images: hmid,
-    title: "PI3000ig Series",
+    images: svd,
+    title: "VD3E Series",
 
-    btn: "PI3070ig HMI",
+    btn: "VD3E Servo Drive (0.4-0.75KW)",
   },
   {
-    images: hmid,
-    title: "PI3000ig Series",
+    images: svdd,
+    title: "VD3E",
 
-    btn: "PI3102ig HMI",
-  },
-  {
-    images: hmid,
-    title: "PI3000ig Series",
-
-    btn: "PI3070ig -O",
-  },
-  {
-    images: hmid,
-    title: "PI3000ig Series",
-    btn: "PI3102ig-O HMI",
+    btn: "VD3E Servo Drive（1.0-3.8KW）",
   },
 
   // Category 2
 
   {
-    images: hmid1,
-    title: "PI3000i Series",
+    images: svd1,
+    title: "VD2",
 
-    btn: "PI3070i HMI",
+    btn: "VD2 Servo Drive (0.4-0.75KW) ",
   },
   {
-    images: hmid1,
-    title: "PI3000i Series",
+    images: svd12,
+    title: "VD2",
 
-    btn: "PI3102i HMI",
+    btn: "VD2 Servo Drive（1.0-3.8KW)",
   },
   {
-    images: hmid1,
-    title: "PI3000i Series",
+    images: svd13,
+    title: "VD2",
 
-    btn: "PI3070i-2S HMI",
+    btn: "VD2 Servo Drive (2KW-5.5KW)",
   },
-  {
-    images: hmid1,
-    title: "PI3000i Series",
-    btn: "PI3070i-A HMI",
-  },
-  {
-    images: hmid1,
-    title: "PI3000i Series",
-    btn: "PI3102i-2S HMI",
-  },
-  {
-    images: hmid1,
-    title: "PI3000i Series",
 
-    btn: "PI3102i-A HMI",
-  },
   // Category 3
   {
-    images: hmid1,
-    title: "PI3000ie Series",
+    images: svd13,
+    title: "VD2F",
 
-    btn: "PI3043ie / PI3043ie-S HMI",
+    btn: "VD2F Servo Driver(0.1kW -0.75KW)",
   },
-  {
-    images: hmid1,
-    title: "PI3000ie Series",
 
-    btn: "PI3070ie HMI",
-  },
-  {
-    images: hmid1,
-    title: "PI3000ie Series",
-
-    btn: "PI8070 HMI",
-  },
-  {
-    images: hmid2,
-    title: "PI3000ie Series",
-    btn: "PI8102H HMI",
-  },
   // Category 4
   {
-    images: hmid3,
-    title: "PI8000 Series",
+    images: svd21,
+    title: "Motor",
 
-    btn: "PI3070i-A HMI",
+    btn: "60 Series Motor Specification",
   },
   {
-    images: hmid3,
-    title: "PI8000 Series",
+    images: svd22,
+    title: "Motor",
 
-    btn: "PI3070i-A HMI",
+    btn: "80 Series Motor Specification",
   },
   {
-    images: hmid3,
-    title: "PI8000 Series",
+    images: svd23,
+    title: "Motor",
 
-    btn: "PI3070i-A HMI",
+    btn: "110 Series Motor Specification",
+  },
+  {
+    images: svd23,
+    title: "Motor",
+
+    btn: "130 Series Motor Specification",
   },
 ];
 
-const ProDetail = () => {
+const ProDetail1 = () => {
   const { title } = useParams();
-  const matchedSections = sectionsData.filter((item) => item.title === title);
-
+  const matchedSections = sectionData.filter((item) => item.title === title);
+  console.log("pefrdyt===>", matchedSections);
   if (!matchedSections.length) {
     alert("No Details to Show");
     return null; // or return some default content or redirect to a 404 page
@@ -171,16 +140,16 @@ const ProDetail = () => {
                   <article class="px-4 pb-4">
                     <ul class="flex flex-col gap-1 pl-2">
                       <li>
-                        <a href=""> PI3000i Series</a>
+                        <a href="">VD3E </a>
                       </li>
                       <li>
-                        <a href=""> PI3000ie Series</a>
+                        <a href=""> VD2</a>
                       </li>
                       <li>
-                        <a href=""> PI3000ig Series</a>
+                        <a href=""> VD2F</a>
                       </li>
                       <li>
-                        <a href=""> PI8000 Series</a>
+                        <a href=""> Motor</a>
                       </li>
                     </ul>
                   </article>
@@ -211,7 +180,7 @@ const ProDetail = () => {
                           d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
                         ></path>
                       </svg>
-                      <span>Screen size</span>
+                      <span>Supply Voltage</span>
                     </span>
                     <svg
                       class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
@@ -230,22 +199,10 @@ const ProDetail = () => {
                   <article class="px-4 pb-4">
                     <ul class="flex flex-col gap-1 pl-2">
                       <li>
-                        <a href=""> 3.5 inch</a>
+                        <a href="">220v</a>
                       </li>
                       <li>
-                        <a href="">4.3 inch </a>
-                      </li>
-                      <li>
-                        <a href=""> 7 inch</a>
-                      </li>
-                      <li>
-                        <a href=""> 10.2 inch</a>
-                      </li>
-                      <li>
-                        <a href=""> 10.4 inch</a>
-                      </li>
-                      <li>
-                        <a href=""> 15 inch</a>
+                        <a href="">380v</a>
                       </li>
                     </ul>
                   </article>
@@ -255,7 +212,7 @@ const ProDetail = () => {
           </button>
         </div>
         <div>
-          <button className="border border-black bg-gray-300 text-black">
+          {/* <button className="border border-black bg-gray-300 text-black">
             <ul class="flex flex-col gap-2 max-w-[280px] mx-auto mt-2">
               <li>
                 <details class="group">
@@ -311,7 +268,7 @@ const ProDetail = () => {
                 </details>
               </li>
             </ul>
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -344,4 +301,4 @@ const ProDetail = () => {
   );
 };
 
-export default ProDetail;
+export default ProDetail1;

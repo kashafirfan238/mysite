@@ -1,9 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import servo1 from '../Assets/servo1.png';
 import servo2 from '../Assets/servo2.png';
 import servo3 from '../Assets/servo3.png';
 import servo4 from '../Assets/servo4.png';
+import { Link } from "react-router-dom";
 
 const AnimatedSection = ({ children, isLeft }) => {
   const [ref, inView] = useInView({
@@ -123,18 +125,18 @@ const Proseries1 = () => {
               <h3 className="font-bold mt-8 text-xl text-[#fdab52]  md:mt-0 sm:text-2xl">
                 {section.title}
               </h3>
-              <h4 className="font-bold mt-8 text-md text-[#fdab52]  md:mt-0 sm:text-2xl">
+              {/* <h4 className="font-bold mt-8 text-md text-[#fdab52]  md:mt-0 sm:text-2xl">
                 {section.titledesc}
-              </h4>
+              </h4> */}
               <ul>
                 {section.description.map((line, index) => (
                   <li key={index}>{Object.values(line)[0]}</li>
                 ))}
               </ul>
-              <button className="px-3 py-3 my-2 bg-gradient-to-r from-[#fdab52] to-[#fdab52] text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
-                {section.btn}
-              </button>
-              <hr />
+              <Link to={`/prodetail1/${section.title}`} className="px-3 py-2 mt-2 bg-gradient-to-r from-[#fdab52] to-[#fdab52] text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
+                  {section.btn}
+                </Link>
+              <hr  className="mt-4"/>
             </div>
           </div>
         </AnimatedSection>
