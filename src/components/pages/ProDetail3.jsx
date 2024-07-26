@@ -1,122 +1,63 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import img1 from "../../Assets/img1.jpg";
-import vboxd from "../../Assets/vboxd.png";
-import vboxd1 from "../../Assets/vboxd1.jpg";
-import hmid2 from "../../Assets/hmid2.jpg";
-import hmid3 from "../../Assets/hmid3.jpg";
+import plcd from "../../Assets/plcd.jpg";
+
+import { useParams } from 'react-router-dom';
 
 const sectionsData = [
-  // Category vbox 1
-  {
-    images: vboxd,
-    title: "PI3000ig Series",
+  // Category 1
 
-    btn: "PI3070ig HMI",
+  {
+    images: d,
+    title: "H Series",
+   
+    btn: "EHTERCAT LX6V 0808MT PLC",
   },
   {
-    images: vboxd1,
-    title: "PI3000ig Series",
-
-    btn: "PI3102ig HMI",
+    images: d1,
+    title: "H Series",
+    btn: "Codesys LX6C-0808MT PLC",
   },
   {
-    images: hmid,
-    title: "PI3000ig Series",
-
-    btn: "PI3070ig -O",
-  },
-  {
-    images: hmid,
-    title: "PI3000ig Series",
-    btn: "PI3102ig-O HMI",
+    images: d2,
+    title: "H Series",
+    btn: "LX6S 0808MT PLC",
   },
 
   // Category 2
 
   {
-    images: hmid1,
-    title: "PI3000i Series",
+    images: plcd3,
+    title: "E Series",
 
-    btn: "PI3070i HMI",
+    btn: "LXV5 1412MT PLC",
   },
   {
-    images: hmid1,
-    title: "PI3000i Series",
+    images: plcd4,
+    title: "E Series",
 
-    btn: "PI3102i HMI",
+    btn: "LXV5 1616MT PLC",
   },
   {
-    images: hmid1,
-    title: "PI3000i Series",
+    images: plcd5,
+      title: "E Series",
 
-    btn: "PI3070i-2S HMI",
+    btn: "LXV5 2424MT/3624MT PLC",
   },
   {
-    images: hmid1,
-    title: "PI3000i Series",
-    btn: "PI3070i-A HMI",
+    images: plcd6,
+    title: "E Series",
+    btn: "LXV5 Ethernet Series",
   },
-  {
-    images: hmid1,
-    title: "PI3000i Series",
-    btn: "PI3102i-2S HMI",
-  },
-  {
-    images: hmid1,
-    title: "PI3000i Series",
-
-    btn: "PI3102i-A HMI",
-  },
-  // Category 3
-  {
-    images: hmid1,
-    title: "PI3000ie Series",
-
-    btn: "PI3043ie / PI3043ie-S HMI",
-  },
-  {
-    images: hmid1,
-    title: "PI3000ie Series",
-
-    btn: "PI3070ie HMI",
-  },
-  {
-    images: hmid1,
-    title: "PI3000ie Series",
-
-    btn: "PI8070 HMI",
-  },
-  {
-    images: hmid2,
-    title: "PI3000ie Series",
-    btn: "PI8102H HMI",
-  },
-  // Category 4
-  {
-    images: hmid3,
-    title: "PI8000 Series",
-
-    btn: "PI3070i-A HMI",
-  },
-  {
-    images: hmid3,
-    title: "PI8000 Series",
-
-    btn: "PI3070i-A HMI",
-  },
-  {
-    images: hmid3,
-    title: "PI8000 Series",
-
-    btn: "PI3070i-A HMI",
-  },
+ 
+ 
 ];
 
-const ProDetail3 = () => {
+const ProDetail2 = () => {
   const { title } = useParams();
   const matchedSections = sectionsData.filter((item) => item.title === title);
-
+  
+  console.log("pefrdyt===>", matchedSections);
   if (!matchedSections.length) {
     alert("No Details to Show");
     return null; // or return some default content or redirect to a 404 page
@@ -171,16 +112,28 @@ const ProDetail3 = () => {
                   <article class="px-4 pb-4">
                     <ul class="flex flex-col gap-1 pl-2">
                       <li>
-                        <a href=""> PI3000i Series</a>
+                        <a href=""> LX6V & LX6S & LX6C</a>
                       </li>
                       <li>
-                        <a href=""> PI3000ie Series</a>
+                        <a href=""> LX5V</a>
                       </li>
                       <li>
-                        <a href=""> PI3000ig Series</a>
+                        <a href=""> LX5S</a>
                       </li>
                       <li>
-                        <a href=""> PI8000 Series</a>
+                        <a href=""> LX3V</a>
+                      </li>
+                      <li>
+                        <a href=""> LX3V Expansion module</a>
+                      </li>
+                      <li>
+                        <a href=""> LX6V Expansion module</a>
+                      </li>
+                      <li>
+                        <a href=""> LX3V BD Module</a>
+                      </li>
+                      <li>
+                        <a href=""> LX5V BD Module</a>
                       </li>
                     </ul>
                   </article>
@@ -211,7 +164,7 @@ const ProDetail3 = () => {
                           d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
                         ></path>
                       </svg>
-                      <span>Screen size</span>
+                      <span>I/O</span>
                     </span>
                     <svg
                       class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
@@ -230,12 +183,12 @@ const ProDetail3 = () => {
                   <article class="px-4 pb-4">
                     <ul class="flex flex-col gap-1 pl-2">
                       <li>
-                        <a href=""> 3.5 inch</a>
+                        <a href=""> 14-26</a>
                       </li>
                       <li>
-                        <a href="">4.3 inch </a>
+                        <a href="">32-60 </a>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href=""> 7 inch</a>
                       </li>
                       <li>
@@ -246,6 +199,65 @@ const ProDetail3 = () => {
                       </li>
                       <li>
                         <a href=""> 15 inch</a>
+                      </li> */}
+                    </ul>
+                  </article>
+                </details>
+              </li>
+            </ul>
+          </button>
+        </div>
+        <div>
+          <button className="border border-black bg-gray-300 text-black">
+            <ul class="flex flex-col gap-2 max-w-[280px] mx-auto mt-2">
+              <li>
+                <details class="group">
+                  <summary class="flex items-center justify-between gap-2 p-2 font-medium marker:content-none hover:cursor-pointer">
+                    <span class="flex gap-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+
+                      <span>Output Type</span>
+                    </span>
+                    <svg
+                      class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                      >
+                        {" "}
+                      </path>
+                    </svg>{" "}
+                  </summary>
+
+                  <article class="px-4 pb-4">
+                    <ul class="flex flex-col gap-1 pl-2">
+                      <li>
+                        <a href=""> Transistor</a>
+                      </li>
+                      <li>
+                        <a href=""> Relay</a>
+                      </li>
+                      <li>
+                        <a href=""> Mix</a>
                       </li>
                     </ul>
                   </article>
@@ -276,7 +288,7 @@ const ProDetail3 = () => {
                         ></path>
                       </svg>
 
-                      <span>Ethernet</span>
+                      <span> Pulse Output </span>
                     </span>
                     <svg
                       class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
@@ -298,13 +310,13 @@ const ProDetail3 = () => {
                   <article class="px-4 pb-4">
                     <ul class="flex flex-col gap-1 pl-2">
                       <li>
-                        <a href=""> Yes</a>
+                        <a href=""> 8 channel</a>
                       </li>
                       <li>
-                        <a href=""> No</a>
+                        <a href="">4 channel </a>
                       </li>
                       <li>
-                        <a href=""> Optional</a>
+                        <a href=""> 2 channel</a>
                       </li>
                     </ul>
                   </article>
@@ -344,4 +356,4 @@ const ProDetail3 = () => {
   );
 };
 
-export default ProDetail3;
+export default ProDetail2;
