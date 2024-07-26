@@ -1,8 +1,11 @@
 import { Route, Router, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+ import Navbar from "./components/Navbar";
 import Home from "./components/pages/Home";
 import Product from "./components/pages/Product";
+
 import Contact from "./components/pages/Contact";
+import About from "./components/pages/About";
+
 import ProSeries from "./components/ProSeries";
 import Footer from "./components/Footer";
 import Proseries1 from "./components/Proseries1";
@@ -25,6 +28,7 @@ function App() {
      <Route path="/products" element={<Product/>}/>
      <Route path="/proSeries" element={<ProSeries/>}/>
      <Route path="/contact" element={<Contact/>}/>
+    <Route path="/about" element={<About/>}/>
      <Route path="/proseries" element={<ProSeries/>}/>
      <Route path="/proseries1" element={<Proseries1/>}/> 
      <Route path="/proseries2" element={<Proseries2/>}/>

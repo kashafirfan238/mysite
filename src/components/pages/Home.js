@@ -11,6 +11,7 @@ const imageUrls = [
 ];
 
 const Home = () => {
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handlePrevSlide = () => {
@@ -34,6 +35,7 @@ const Home = () => {
   }, [currentSlide]);
 
   return (
+    
     <div id="default-carousel" className="relative w-full" data-carousel="slide">
       {/* Carousel wrapper */}
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -84,6 +86,7 @@ const Home = () => {
   <FontAwesomeIcon icon={faCircleChevronRight}  />
       </button>
     </div>
+
   );
 };
 
