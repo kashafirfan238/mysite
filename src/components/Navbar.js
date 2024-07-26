@@ -1,6 +1,160 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import plcd from "../../src/Assets/plcd.jpg";
+import plcd1 from "../../src/Assets/plcd1.jpg";
+import plcd2 from "../../src/Assets/plcd2.jpg";
+import plcd3 from "../../src/Assets/plcd3.jpg";
+import plcd4 from "../../src/Assets/plcd4.jpg";
+import plcd5 from "../../src/Assets/plcd5.jpg";
+import plcd6 from "../../src/Assets/plcd6.jpg";
+import plcd7 from "../../src/Assets/plcd7.jpg";
+import plcd8 from "../../src/Assets/plcd8.jpg";
+import plcd9 from "../../src/Assets/plcd9.jpg";
+import plcd10 from "../../src/Assets/plcd10.jpg";
+import plcd11 from "../../src/Assets/plcd11.jpg";
+import plcd12 from "../../src/Assets/plcd12.jpg";
+import plcd13 from "../../src/Assets/plcd13.jpg";
+import plcd14 from "../../src/Assets/plcd14.jpg";
+import plcd15 from "../../src/Assets/plcd15.jpg";
+import plcd16 from "../../src/Assets/plcd16.jpg";
+import plcd17 from "../../src/Assets/plcd17.jpg";
+import plcd18 from "../../src/Assets/plcd18.jpg";
+import plcd19 from "../../src/Assets/plcd19.jpg";
+import { useParams } from 'react-router-dom';
 
+const sectionsData = [
+  // Category 1
+  {
+    images: plcd,
+    title: "PI3000ig",
+    btn: "EHTERCAT LX6V 0808MT PLC",
+  },
+  {
+    images: plcd1,
+    title: "PI3000ig",
+    btn: "Codesys LX6C-0808MT PLC",
+  },
+  {
+    images: plcd2,
+    title: "PI3000ig",
+    btn: "LX6S 0808MT PLC",
+  },
+
+  // Category 2
+
+  {
+    images: plcd3,
+     title: "LX5V",
+
+    btn: "LXV5 1412MT PLC",
+  },
+  {
+    images: plcd4,
+    title: "LX5V",
+
+    btn: "LXV5 1616MT PLC",
+  },
+  {
+    images: plcd5,
+     title: "LX5V",
+
+    btn: "LXV5 2424MT/3624MT PLC",
+  },
+  {
+    images: plcd6,
+    title: "LX5V",
+    btn: "LXV5 Ethernet Series",
+  },
+ 
+  // Category 3
+  {
+    images: plcd7,
+    title: "LX5S",
+    btn: "LX5S 0806M/ 1028M",
+  },
+  {
+    images: plcd8,
+    title: "LX5S",
+    btn: "LX5S 1412M",
+  },
+  {
+    images: plcd9,
+    title: "LX5S",
+    btn: "LX5S 1616M/2416M",
+  },
+  {
+    images: plcd10,
+    title: "LX5S",
+    btn: "LX5S 2424M/3624M",
+  },
+  {
+    images: plcd11,
+    title: "LX5S",
+    btn: "LX5S Ethernet Series PLC",
+  },
+  // Category 4
+  {
+    images: plcd12,
+    title: "LXEV",
+    btn: "LX3V 0806M/1208M PLC",
+  },
+  {
+    images: plcd13,
+    title: "LXEV",
+    btn: "LX3V 1212M/1412M PLC",
+  },
+  {
+    images: plcd14,
+    title: "LXEV",
+    btn: "LX3V 1616M/2416M PLC",
+  },
+  {
+    images: plcd15,
+    title: "LXEV",
+    btn: "LX3V 2424M/3624M PLC",
+  },
+  {
+    images: plcd16,
+    title: "HMI",
+
+    btn: "LX3V 0806M/1208M PLC",
+  },
+  {
+    images: plcd17,
+    title: "HMI",
+    btn: "LX3VP 1212M/1412M PLC",
+  },
+  {
+    images: plcd18,
+    title: "LXEV",
+    btn: "LX3VP 1616M/2416M PLC",
+  },
+  {
+    images: plcd19,
+    title: "LXEV",
+
+    btn: "LX3VP 2424M/3624M PLC",
+  },
+   // Category 5
+   {
+    images: plcd12,
+    title: "Expansion Module",
+
+    btn: "LX3V 0806M/1208M PLC",
+  },
+  {
+    images: plcd13,
+    title: "Expansion Module",
+
+    btn: "LX3V 1212M/1412M PLC",
+  },
+  {
+    images: plcd14,
+    title: "Expansion Module",
+    btn: "LX3V 1616M/2416M PLC",
+  },
+  
+];
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -13,8 +167,23 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-
 const Navbar = () => {
+  const [searchTerm, setSearchTerm]=useState("");
+  const [filterData, setFilterData]=useState([]);
+  
+  const handleSearch=(e)=>{
+    const value =e.target.value.toLowerCase();
+    setSearchTerm(value);
+    if(value===""){
+      setSearchTerm('')
+    }else{
+      const filtered=sectionsData.filter((item)=>item.title.toLowerCase().includes(value)
+    )
+      setFilterData(filtered)
+    }
+  }
+  
+
   return (
     
     
@@ -43,8 +212,18 @@ const Navbar = () => {
         </svg>
         <span class="sr-only">Search icon</span>
       </div>
-      <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..."/>
+      <input type="text" value={searchTerm} onChange={handleSearch} id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..."/>
+      <div className='z-50 absolute bg-gray-700 border border-1 text-white'>
+     {searchTerm && filterData.length > 0 && (
+        <ul className='z-50 absolute bg-gray-600 p-4 overflow-y-auto max-h-48'>
+          {filterData.map((item) => (
+            <li key={item.id}>{item.title}</li>
+          ))}
+        </ul>
+      )}
+     </div>
     </div>
+   
     <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

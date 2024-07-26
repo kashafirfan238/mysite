@@ -27,17 +27,17 @@ const sectionsData = [
 
   {
     images: plcd,
-    title: "PI3000ig ",
+    title: "PI3000ig",
     btn: "EHTERCAT LX6V 0808MT PLC",
   },
   {
     images: plcd1,
-    title: "PI3000ig ",
+    title: "PI3000ig",
     btn: "Codesys LX6C-0808MT PLC",
   },
   {
     images: plcd2,
-    title: "PI3000ig ",
+    title: "PI3000ig",
     btn: "LX6S 0808MT PLC",
   },
 
@@ -45,103 +45,94 @@ const sectionsData = [
 
   {
     images: plcd3,
-     title: "LX5V Series",
+     title: "LX5V",
 
     btn: "LXV5 1412MT PLC",
   },
   {
     images: plcd4,
-    title: "LX5V Series",
+    title: "LX5V",
 
     btn: "LXV5 1616MT PLC",
   },
   {
     images: plcd5,
-     title: "LX5V Series",
+     title: "LX5V",
 
     btn: "LXV5 2424MT/3624MT PLC",
   },
   {
     images: plcd6,
-    title: "LX5V Series",
+    title: "LX5V",
     btn: "LXV5 Ethernet Series",
   },
  
   // Category 3
   {
     images: plcd7,
-     title: "LX5S Series",
-
+    title: "LX5S",
     btn: "LX5S 0806M/ 1028M",
   },
   {
     images: plcd8,
-    title: "LX5S Series",
-
+    title: "LX5S",
     btn: "LX5S 1412M",
   },
   {
     images: plcd9,
-    title: "LX5S Series",
-
+    title: "LX5S",
     btn: "LX5S 1616M/2416M",
   },
   {
     images: plcd10,
-    title: "LX5S Series",
+    title: "LX5S",
     btn: "LX5S 2424M/3624M",
   },
   {
     images: plcd11,
-    title: "LX5S Series",
+    title: "LX5S",
     btn: "LX5S Ethernet Series PLC",
   },
   // Category 4
   {
     images: plcd12,
-    title: "LXEV Series",
-
+    title: "LXEV",
     btn: "LX3V 0806M/1208M PLC",
   },
   {
     images: plcd13,
-    title: "LXEV Series",
-
+    title: "LXEV",
     btn: "LX3V 1212M/1412M PLC",
   },
   {
     images: plcd14,
-    title: "LXEV Series",
-
+    title: "LXEV",
     btn: "LX3V 1616M/2416M PLC",
   },
   {
     images: plcd15,
-    title: "LXEV Series",
-
+    title: "LXEV",
     btn: "LX3V 2424M/3624M PLC",
   },
   {
     images: plcd16,
-    title: "LXEV Series",
+    title: "LXEV",
 
     btn: "LX3V 0806M/1208M PLC",
   },
   {
     images: plcd17,
-    title: "LXEV Series",
-
+    title: "LXEV",
     btn: "LX3VP 1212M/1412M PLC",
   },
   {
     images: plcd18,
-    title: "LXEV Series",
-
+    title: "LXEV",
     btn: "LX3VP 1616M/2416M PLC",
   },
   {
     images: plcd19,
-    title: "LXEV Series",
+    title: "LXEV",
 
     btn: "LX3VP 2424M/3624M PLC",
   },
@@ -161,7 +152,6 @@ const sectionsData = [
   {
     images: plcd14,
     title: "Expansion Module",
-
     btn: "LX3V 1616M/2416M PLC",
   },
   
@@ -170,13 +160,11 @@ const sectionsData = [
 const ProDetail2 = () => {
   const { title } = useParams();
   const matchedSections = sectionsData.filter((item) => item.title === title);
-  
   console.log("pefrdyt===>", matchedSections);
   if (!matchedSections.length) {
     alert("No Details to Show");
     return null; // or return some default content or redirect to a 404 page
   }
-
   return (
     <>
       <div>

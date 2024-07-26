@@ -28,14 +28,12 @@ const AnimatedSection = ({ children, isLeft }) => {
     </div>
   );
 };
-
 const sectionsData = [
   {
     image: plc1,
     // title: "PI3000ig Series",
     // titledesc:"ig IIoT HMI, born specifically for the Internet of Things",
-     title: "PI3000ig ",
-
+    title: "PI3000ig",
     description: [
       { line1: "Supports EtherCAT and USB TYPE-C" },
       { line2: "Supports IEC61131-3 LD programming mode,free-tag protocol" },
@@ -50,7 +48,7 @@ const sectionsData = [
   },
   {
     image: plc2,
-    title: "LX5V Series",
+    title: "LX5V",
     titledesc:"",
     description:[
       { line1: "8-axis high speed pulse input and output" },
@@ -68,7 +66,7 @@ const sectionsData = [
   },
   {
     image: plc3,
-    title: "LX5S Series",
+    title: "LX5S",
     titledesc: "",
     description:[
       { line1: "High speed pulse input and output" },
@@ -85,7 +83,7 @@ const sectionsData = [
 
   {
     image: plc4,
-    title: "LXEV Series",
+    title: "LXEV",
    titledesc:"",
     description:[
       { line1: "High speed pulse input and output" },
@@ -174,7 +172,7 @@ const Proseries2 = () => {
                   <li key={index}>{Object.values(line)[0]}</li>
                 ))}
               </ul>
-<Link to={`/prodetail2/${section.id}`} class ="px-3 py-3 my-2 bg-gradient-to-r from-[#fdab52] to-[#fdab52] text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">{section.btn}</Link>
+<Link to={`/prodetail2/${section.title}`} class ="px-3 py-3 my-2 bg-gradient-to-r from-[#fdab52] to-[#fdab52] text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">{section.btn}</Link>
 
 </>
 
