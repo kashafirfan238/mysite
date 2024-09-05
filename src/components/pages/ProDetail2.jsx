@@ -156,7 +156,6 @@ const sectionsData = [
   },
   
 ];
-
 const ProDetail2 = () => {
   const { title } = useParams();
   const matchedSections = sectionsData.filter((item) => item.title === title);

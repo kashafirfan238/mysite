@@ -1,7 +1,7 @@
 import React from "react";
 import img1 from "../../Assets/img1.jpg";
 import plcd from "../../Assets/plcd.jpg";
-
+import d from '../../Assets/d'
 import { useParams } from 'react-router-dom';
 
 const sectionsData = [

@@ -11,19 +11,16 @@ const sectionsData = [
   {
     images: hmid,
     title: "PI3000ig Series",
-
     btn: "PI3070ig HMI",
   },
   {
     images: hmid,
     title: "PI3000ig Series",
-
     btn: "PI3102ig HMI",
   },
   {
     images: hmid,
     title: "PI3000ig Series",
-
     btn: "PI3070ig -O",
   },
   {
@@ -37,19 +34,16 @@ const sectionsData = [
   {
     images: hmid1,
     title: "PI3000i Series",
-
     btn: "PI3070i HMI",
   },
   {
     images: hmid1,
     title: "PI3000i Series",
-
     btn: "PI3102i HMI",
   },
   {
     images: hmid1,
     title: "PI3000i Series",
-
     btn: "PI3070i-2S HMI",
   },
   {
@@ -65,26 +59,22 @@ const sectionsData = [
   {
     images: hmid1,
     title: "PI3000i Series",
-
     btn: "PI3102i-A HMI",
   },
   // Category 3
   {
     images: hmid1,
     title: "PI3000ie Series",
-
     btn: "PI3043ie / PI3043ie-S HMI",
   },
   {
     images: hmid1,
     title: "PI3000ie Series",
-
     btn: "PI3070ie HMI",
   },
   {
     images: hmid1,
     title: "PI3000ie Series",
-
     btn: "PI8070 HMI",
   },
   {
@@ -96,19 +86,16 @@ const sectionsData = [
   {
     images: hmid3,
     title: "PI8000 Series",
-
     btn: "PI3070i-A HMI",
   },
   {
     images: hmid3,
     title: "PI8000 Series",
-
     btn: "PI3070i-A HMI",
   },
   {
     images: hmid3,
     title: "PI8000 Series",
-
     btn: "PI3070i-A HMI",
   },
 ];

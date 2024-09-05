@@ -1,5 +1,4 @@
 import Home from "./pages/Home";
-
 export const  data=[
     {
         title:'HMI',

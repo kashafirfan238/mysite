@@ -21,7 +21,7 @@ const sectionData = [
   },
   {
     images: svdd,
-    title: "VD3E",
+    title: "VD2 Series",
 
     btn: "VD3E Servo Drive（1.0-3.8KW）",
   },
@@ -30,19 +30,19 @@ const sectionData = [
 
   {
     images: svd1,
-    title: "VD2",
+    title: "VD2 Series",
 
     btn: "VD2 Servo Drive (0.4-0.75KW) ",
   },
   {
     images: svd12,
-    title: "VD2",
+    title: "VD2 Series",
 
     btn: "VD2 Servo Drive（1.0-3.8KW)",
   },
   {
     images: svd13,
-    title: "VD2",
+    title: "VD2 Series",
 
     btn: "VD2 Servo Drive (2KW-5.5KW)",
   },
@@ -50,7 +50,7 @@ const sectionData = [
   // Category 3
   {
     images: svd13,
-    title: "VD2F",
+    title: "VD2F Series",
 
     btn: "VD2F Servo Driver(0.1kW -0.75KW)",
   },
@@ -58,25 +58,25 @@ const sectionData = [
   // Category 4
   {
     images: svd21,
-    title: "Motor",
+    title: "Servo Motor",
 
     btn: "60 Series Motor Specification",
   },
   {
     images: svd22,
-    title: "Motor",
+    title: "Servo Motor",
 
     btn: "80 Series Motor Specification",
   },
   {
     images: svd23,
-    title: "Motor",
+    title: "Servo Motor",
 
     btn: "110 Series Motor Specification",
   },
   {
     images: svd23,
-    title: "Motor",
+    title: "Servo Motor",
 
     btn: "130 Series Motor Specification",
   },

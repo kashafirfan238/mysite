@@ -5,10 +5,10 @@ import img1 from '../../Assets/img1.jpg';
 import img2 from '../../Assets/img2.jpg'; 
 import img3 from '../../Assets/img3.png'; 
 import video2 from '../../Assets/Video/video2.mp4';
-import video3 from '../../Assets/Video/video3.mp4';
+// import video3 from '../../Assets/Video/video3.mp4';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronRight, faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons';
-
+import ReactPlayer from 'react-player';
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -17,7 +17,7 @@ const Home = () => {
     { type: 'image', src: img2 },
     { type: 'image', src: img3 },
     { type: 'video', src: video2 },
-    { type: 'video', src: video3 },
+    // { type: 'video', src: video3 },
   ];
 
   const handlePrevSlide = () => {
@@ -58,13 +58,14 @@ const Home = () => {
                 alt={`Slide ${index + 1}`}
               />
             ) : (
-              <video
-                controls
-                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              >
-                <source src={slide.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <ReactPlayer
+  url={slide.src}
+  playing={index === currentSlide} // Only play the current video
+  controls={true} // Show player controls
+  width="100vw" // Full width of the viewport
+  height="100vh" // Full height of the viewport
+  className="absolute top-0 left-0"
+/>
             )}
           </div>
         ))}
