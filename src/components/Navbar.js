@@ -125,12 +125,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="relative">
-              <button
-                onClick={() => setIsProductsOpen(!isProductsOpen)}
+              <Link
+                to={"/products"}
                 className={`block py-2 pl-3 pr-4 rounded text-2xl ${path.startsWith('/products') ? 'text-white' : 'text-black'}`}
               >
                 Products
-              </button>
+              </Link>
               {isProductsOpen && (
                 <ul className="absolute top-full left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg">
                   <li>

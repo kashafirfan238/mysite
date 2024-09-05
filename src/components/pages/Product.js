@@ -7,7 +7,10 @@ import img1 from '../../Assets/img1.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 
 
-const Product = () =>
+const Product = () =>{
+
+  
+
  
  
  { const divStyle = {
@@ -36,6 +39,7 @@ const clickFunc1=()=>{
       }
   return (
     <>
+   
     <div><img className="   " src={img1} alt=""/></div>
 
       <div className="mx-auto max-w-screen-lg">
@@ -150,5 +154,6 @@ const clickFunc1=()=>{
     </>
   );
 };
+}
 
 export default Product;
